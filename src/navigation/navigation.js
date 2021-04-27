@@ -5,29 +5,31 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/Ionicons'
 // screens
-import Home from '../screens/Home'
-import Profile from '../screens/Profile'
+import Camera from '../screens/Camera'
+import Tutorial from '../screens/Tutorial'
 
 const Stack = createStackNavigator()
 const Tab = createBottomTabNavigator()
 
+const ICON_SIZE = 36
+
 const MyTabs = () => (
   <Tab.Navigator>
     <Tab.Screen
-      name='Home'
-      component={Home}
+      name='Camera'
+      component={Camera}
       options={{
-        tabBarIcon: ({ focused, color, size }) => {
-          return <Icon name={'ios-home'} size={25} color={color} />
+        tabBarIcon: ({ color }) => {
+          return <Icon name={'ios-camera'} size={ICON_SIZE} color={color} />
         }
       }}
     />
     <Tab.Screen
-      name='Profile'
-      component={Profile}
+      name='Tutorial'
+      component={Tutorial}
       options={{
-        tabBarIcon: ({ focused, color, size }) => {
-          return <Icon name={'ios-settings'} size={25} color={color} />
+        tabBarIcon: ({ color }) => {
+          return <Icon name={'ios-information-circle'} size={ICON_SIZE} color={color} />
         }
       }}
     />
@@ -38,7 +40,7 @@ const MyTabs = () => (
 const MainNavigation = () => (
   <NavigationContainer>
     <Stack.Navigator headerMode='none'>
-      <Stack.Screen name='Home' component={MyTabs} />
+      <Stack.Screen name='Main' component={MyTabs} />
     </Stack.Navigator>
   </NavigationContainer>
 )

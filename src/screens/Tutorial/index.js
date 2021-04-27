@@ -2,25 +2,22 @@ import * as React from 'react'
 // libs
 import {
   SafeAreaView,
-  View,
   StatusBar
 } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons'
+// components
+import TutorialContainer from '../../components/TutorialContainer'
 // styles
-import { styles } from './views'
+import { styles } from '../Camera/views'
 
-const Home = ({ navigation }) => {
+const Tutorial = () => {
   return (
     <>
       <StatusBar barStyle='dark-content' backgroundColor={'#f9f9f9'} />
       <SafeAreaView style={styles.SafeAreaView}>
-        <View style={styles.outerWrapper}>
-          <Icon name={'ios-home'} size={100} color={'purple'} />
-        </View>
+        <TutorialContainer />
       </SafeAreaView>
     </>
   )
 }
 
-
-export default Home
+export default Tutorial
