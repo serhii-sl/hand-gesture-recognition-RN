@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* HandGestureRecognitionRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HandGestureRecognitionRNTests.m */; };
 		032EE087ACB463D4A22B852A /* libPods-HandGestureRecognitionRN-HandGestureRecognitionRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 628D9ED938DEF22A2A7F540E /* libPods-HandGestureRecognitionRN-HandGestureRecognitionRNTests.a */; };
+		12AF8DD5263CCC7D007E7B4F /* libPods-HandGestureRecognitionRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3AA30FC52A9B8942FD2363 /* libPods-HandGestureRecognitionRN.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1A0106860AE50A80AE68FD90 /* libPods-HandGestureRecognitionRN.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3AA30FC52A9B8942FD2363 /* libPods-HandGestureRecognitionRN.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -30,6 +30,13 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = HandGestureRecognitionRN;
 		};
+		12AF8DC5263CC9C9007E7B4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12AF8DC1263CC9C9007E7B4F /* RNImageModifier.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNImageModifier;
+		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
@@ -45,6 +52,7 @@
 		00E356EE1AD99517003FC87E /* HandGestureRecognitionRNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandGestureRecognitionRNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HandGestureRecognitionRNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandGestureRecognitionRNTests.m; sourceTree = "<group>"; };
+		12AF8DC1263CC9C9007E7B4F /* RNImageModifier.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImageModifier.xcodeproj; path = "../node_modules/react-native-image-modifier/ios/RNImageModifier.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HandGestureRecognitionRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandGestureRecognitionRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HandGestureRecognitionRN/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = HandGestureRecognitionRN/AppDelegate.m; sourceTree = "<group>"; };
@@ -98,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A0106860AE50A80AE68FD90 /* libPods-HandGestureRecognitionRN.a in Frameworks */,
+				12AF8DD5263CCC7D007E7B4F /* libPods-HandGestureRecognitionRN.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +146,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		12AF8DC2263CC9C9007E7B4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12AF8DC6263CC9C9007E7B4F /* libRNImageModifier.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* HandGestureRecognitionRN */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +185,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				12AF8DC1263CC9C9007E7B4F /* RNImageModifier.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -358,6 +375,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 12AF8DC2263CC9C9007E7B4F /* Products */;
+					ProjectRef = 12AF8DC1263CC9C9007E7B4F /* RNImageModifier.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* HandGestureRecognitionRN */,
@@ -367,6 +390,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		12AF8DC6263CC9C9007E7B4F /* libRNImageModifier.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNImageModifier.a;
+			remoteRef = 12AF8DC5263CC9C9007E7B4F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {

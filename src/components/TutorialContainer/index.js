@@ -28,5 +28,4 @@ const TutorialContainer = () => (
   </View>
 )
 
-
 export default TutorialContainer
