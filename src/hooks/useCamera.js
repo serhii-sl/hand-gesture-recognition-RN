@@ -21,9 +21,14 @@ export const useCamera = () => {
   const [isCameraReady, setIsCameraReady] = React.useState(false)
   const [cropperImageUri, setCropperImageUri] = React.useState('')
   const [grayStyleImageData, setGrayStyleImageData] = React.useState([])
+  const [recognizedText, setRecognizedText] = React.useState('')
 
   const onCameraReady = () => {
     setIsCameraReady(true)
+  }
+
+  const clearFields = () => {
+    setRecognizedText('')
   }
 
   const cropPicture = async (imageData, maskDimension) => {
@@ -121,7 +126,7 @@ export const useCamera = () => {
       const grayStyleArray = []
 
       for (let i = 0; i < RGBAValues.length; i += 4) {
-        let avg = Number(((RGBAValues[i] + RGBAValues[i + 1] + RGBAValues[i + 2]) / 3).toFixed())
+        let avg = Number((((RGBAValues[i] + RGBAValues[i + 1] + RGBAValues[i + 2]) / 3) / 255).toFixed(2))
 
         imageData.data[i] = avg
         imageData.data[i + 1] = avg
@@ -137,10 +142,12 @@ export const useCamera = () => {
   return {
     cameraRef,
     isCameraReady,
+    recognizedText,
     hasPermission,
     onCameraReady,
     handleCanvas,
     cropperImageUri,
-    handlePictureProcessing
+    handlePictureProcessing,
+    clearFields
   }
 }

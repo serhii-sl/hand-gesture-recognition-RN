@@ -20,10 +20,21 @@ export const styles = StyleSheet.create({
     borderStyle: 'dotted',
     borderRadius: 15
   },
+  flipButton: {
+    position: 'absolute',
+    height: 50,
+    width: 40,
+    top: 24,
+    left: 12,
+  },
+  flipImage: {
+    height: 50,
+    width: 40,
+  },
   shutterButton: {
     position: 'absolute',
     bottom: 0,
-    left: 20,
+    right: 20,
     width: 170,
     height: 50,
     justifyContent: 'center',
@@ -37,7 +48,7 @@ export const styles = StyleSheet.create({
   clearButton: {
     position: 'absolute',
     bottom: 0,
-    right: 20,
+    left: 20,
     width: 170,
     height: 50,
     justifyContent: 'center',
